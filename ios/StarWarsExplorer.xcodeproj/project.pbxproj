@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		756C9E2FCED9C98846F48B09 /* libPods-StarWarsExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 417E49718AAF2CF3A1A03453 /* libPods-StarWarsExplorer.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C908179E27BFE8560048FAB6 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C908179D27BFE8560048FAB6 /* LaunchImage.png */; };
 		C9F999D927BFCDD100E34CB0 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F999D827BFCDD100E34CB0 /* LaunchImage.png */; };
 		F402106051B8827CB55CAE26 /* libPods-StarWarsExplorer-StarWarsExplorerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B14D29AE05AF2C4DFE665F0 /* libPods-StarWarsExplorer-StarWarsExplorerTests.a */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		AE9EE34E47529B394CCF2062 /* Pods-StarWarsExplorer-StarWarsExplorerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsExplorer-StarWarsExplorerTests.release.xcconfig"; path = "Target Support Files/Pods-StarWarsExplorer-StarWarsExplorerTests/Pods-StarWarsExplorer-StarWarsExplorerTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEFCABD944479FCAA38D50B0 /* Pods-StarWarsExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsExplorer.release.xcconfig"; path = "Target Support Files/Pods-StarWarsExplorer/Pods-StarWarsExplorer.release.xcconfig"; sourceTree = "<group>"; };
 		BCB0605BD69AD272B01865F1 /* Pods-StarWarsExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsExplorer.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsExplorer/Pods-StarWarsExplorer.debug.xcconfig"; sourceTree = "<group>"; };
+		C908179D27BFE8560048FAB6 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = StarWarsExplorer/LaunchImage.png; sourceTree = "<group>"; };
 		C9F999D827BFCDD100E34CB0 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchImage.png; path = StarWarsExplorer/LaunchImage.png; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 		13B07FAE1A68108700A75B9A /* StarWarsExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				C908179D27BFE8560048FAB6 /* LaunchImage.png */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				C9F999D827BFCDD100E34CB0 /* LaunchImage.png */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C908179E27BFE8560048FAB6 /* LaunchImage.png in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				C9F999D927BFCDD100E34CB0 /* LaunchImage.png in Resources */,
