@@ -10,10 +10,13 @@ export let internetConnectionTitle = appName;
 export let internetConnectionMessage = 'No Internet Connection available!! Please try later..';
 
 
-export let DETAIL_BG_COLOR = '#d6d6d6';
-export let DETAIL_LEFT_FONT_COLOR = '#825e3f';
-export let DETAIL_RIGHT_FONT_COLOR = '#ff8080';
+export let DETAIL_BG_COLOR = '#000000';
+export let DETAIL_LEFT_FONT_COLOR = '#c9b84f';
+export let DETAIL_RIGHT_FONT_COLOR = '#e4ce48';
 
+export let PEOPLE_BG_IMAGE = 'https://parade.com/wp-content/uploads/2015/04/the-best-star-wars-quotes-of-all-time-1024x640.jpg';
+//export let PEOPLE_BG_IMAGE = 'https://content.internetvideoarchive.com/content/hdphotos/13116/013116/013116_1152x864_637407232192928078.jpg';
+export let MOVIE_BG_IMAGE = 'https://images.hdqwalls.com/wallpapers/star-wars-dark-space-0a.jpg';
 
 export function checkIntenetStatus(){
   if(Platform.OS === 'android'){

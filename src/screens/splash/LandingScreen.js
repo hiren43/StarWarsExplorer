@@ -6,10 +6,9 @@ import FastImage from 'react-native-fast-image'
 class LandingScreen extends Component{
 
     componentDidMount(){
-        console.log('xxx');
+
         let that = this;
         setTimeout(function() {
-            console.log('xxx timeout');
             that.props.navigation.navigate('Main');
         }, 3500);
 

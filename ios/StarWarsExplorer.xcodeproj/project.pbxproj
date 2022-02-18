@@ -145,7 +145,6 @@
 				8B77BFDDFB9E8645BCE720B7 /* Pods-StarWarsExplorer-StarWarsExplorerTests.debug.xcconfig */,
 				AE9EE34E47529B394CCF2062 /* Pods-StarWarsExplorer-StarWarsExplorerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

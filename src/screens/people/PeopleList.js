@@ -8,6 +8,7 @@ import {
   Text,
   FlatList,
   Image,
+  ImageBackground,
   View,
 } from 'react-native';
 
@@ -18,6 +19,7 @@ import CommonStyles from '../../styles/CommonStyles.js'
 import Loader from '../Loader.js'
 import PeopleCard from '../../components/PeopleCard.js'
 import PeopleDetails from './PeopleDetails.js'
+const CONSTANTS = require('../../constant/const.js')
 
 let isNextPageAvailable = true;
 let pageNo = 1;
@@ -31,6 +33,7 @@ export default class PeopleList extends React.Component{
             people: [],
             isLoading: true,
             isFetching: false,
+            isPageLoading: false,
         }
     }
 
@@ -43,6 +46,7 @@ export default class PeopleList extends React.Component{
         console.log('onEndReached');
 
         if(isNextPageAvailable){
+            this.setState({ isPageLoading: true });
             pageNo = pageNo + 1;
             this.callGetPeopleAPI();
         }
@@ -59,7 +63,7 @@ export default class PeopleList extends React.Component{
             else{
                 isNextPageAvailable = false
             }
-            parent.setState({ people: parent.state.people.concat(data.results), isLoading: false, isFetching: false });
+            parent.setState({ people: parent.state.people.concat(data.results), isLoading: false, isFetching: false, isPageLoading: false });
         });
     }
 
@@ -90,9 +94,9 @@ export default class PeopleList extends React.Component{
         }
 
         return(
-            <View style={{flex: 1}}>
+            <ImageBackground source={{ uri : CONSTANTS.PEOPLE_BG_IMAGE}} style={{flex: 1, backgroundColor: 'transparent'}}>
                 <FlatList
-                  style={{flex: 1, paddingLeft: 20, paddingRight: 20}}
+                  style={CommonStyles.FlatListContainer}
                   contentContainerStyle={{paddingBottom: 20}}
                   data={this.state.people}
                   keyExtractor={(item, index)=> index.toString()}
@@ -102,7 +106,22 @@ export default class PeopleList extends React.Component{
                   onRefresh={() => this.onRefresh()}
                   refreshing={this.state.isFetching}
                 />
-            </View>
+
+                {this.state.isPageLoading &&
+                    <View style={{position: 'absolute', bottom: 5, width: '100%', alignItems: 'center'}}>
+                        <FastImage
+                           style={{width: 40, height: 40}}
+                           source={{
+                               uri: 'https://i.gifer.com/ZZ5H.gif',
+                               headers: { Authorization: 'someAuthToken' },
+                               priority: FastImage.priority.normal,
+                           }}
+                           resizeMode={FastImage.resizeMode.contain}
+                        />
+                    </View>
+                }
+
+            </ImageBackground>
         );
     }
 }

@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Text,
   FlatList,
+  ImageBackground,
   View,
 } from 'react-native';
 
@@ -16,6 +17,7 @@ import CommonStyles from '../../styles/CommonStyles.js'
 import MovieCard from '../../components/MovieCard.js'
 import Loader from '../Loader.js'
 import MovieDetails from './MovieDetails.js'
+const CONSTANTS = require('../../constant/const.js')
 
 export default class MovieList extends React.Component{
 
@@ -57,14 +59,15 @@ export default class MovieList extends React.Component{
         }
 
         return(
-            <View style={{flex: 1}}>
+            <ImageBackground source={{ uri : CONSTANTS.MOVIE_BG_IMAGE}} style={{flex: 1, backgroundColor: 'transparent'}}>
                 <FlatList
                   style={CommonStyles.FlatListContainer}
+                  contentContainerStyle={{paddingBottom: 30}}
                   data={this.state.movie}
                   keyExtractor={(item, index)=> index.toString()}
                   renderItem={this._renderItem}
                 />
-            </View>
+            </ImageBackground>
         );
     }
 }

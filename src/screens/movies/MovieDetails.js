@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   useColorScheme,
+  ImageBackground,
   View,
   Dimensions,
 } from 'react-native';
@@ -31,9 +32,9 @@ let margin = 10;
 
         const movieData = props.navigation.state.params.movieData
 
-       //  MovieDetails.navigationOptions = ({navigation}) => ({
-       //   title: navigation.getParam('title', movieData.title),
-       // })
+        MovieDetails.navigationOptions = ({navigation}) => ({
+         title: navigation.getParam('title', movieData.title),
+       })
 
         console.log('props: ', movieData);
 
@@ -44,7 +45,10 @@ let margin = 10;
     },[]);
 
     return(
-        <View style={styles.container}>
+
+
+
+        <ImageBackground style={styles.container} source={{ uri : 'https://starwarsblog.starwars.com/wp-content/uploads/2020/06/star-wars-hasbro-empire-darth-vader-05-23h28h.jpg'}} style={{flex: 1, backgroundColor: 'transparent'}}>
 
             <View style={styles.boxes}>
                 <View style={styles.boxLeft}>
@@ -86,7 +90,7 @@ let margin = 10;
             </View>
 
 
-        </View>
+        </ImageBackground>
 
     );
 
@@ -95,7 +99,7 @@ let margin = 10;
 const styles = StyleSheet.create({
 
   container: {
-    paddingTop: 0,
+    paddingTop: 20,
     flex: 1,
     backgroundColor: CONSTANTS.DETAIL_BG_COLOR
   },
@@ -129,16 +133,15 @@ const styles = StyleSheet.create({
 
   leftFontStyle: {
     padding: 5,
-    color: '#429e9a',
     color: CONSTANTS.DETAIL_LEFT_FONT_COLOR,
     fontSize: 22,
   },
 
   rightFontStyle: {
     padding: 5,
-    color: '#2663fc',
     color: CONSTANTS.DETAIL_RIGHT_FONT_COLOR,
     fontSize: 26,
+    fontWeight: 'bold'
   },
 });
 

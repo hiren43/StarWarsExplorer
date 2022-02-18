@@ -131,7 +131,7 @@ let margin = 10;
 const styles = StyleSheet.create({
 
   container: {
-    paddingTop: 0,
+    paddingTop: 20,
     flex: 1,
     backgroundColor: CONSTANTS.DETAIL_BG_COLOR
   },
@@ -175,6 +175,7 @@ const styles = StyleSheet.create({
     color: '#2663fc',
     color: CONSTANTS.DETAIL_RIGHT_FONT_COLOR,
     fontSize: 26,
+    fontWeight: 'bold'
   },
 });
 
